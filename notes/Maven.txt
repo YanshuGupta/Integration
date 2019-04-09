@@ -1,0 +1,12 @@
+It is ->Build Tool 
+	or
+Project management tool
+
+
+pom.xml
+1>project info
+2>dependency
+3>build (if you want to change version), (changing jar file name), (plugins ex-sonarQube)
+4>Repository (by default download from- Maven central Repository) (nexux corporate repository)
+
+By default Junit jar files are imported

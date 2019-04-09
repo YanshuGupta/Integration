@@ -1,0 +1,9 @@
+factory.setFirstName("ABCDEF");
+factory.setLastName("UVWXYZ");
+factory.setEmail("abc.xyz@capgemini.com");
+factory.setContactNo("9999999999");
+factory.setNoOfPerson("3");
+factory.setBuildingAndRoomNo("Technology park Unit-2 Talwade");
+factory.setAreaName("Talwade");
+factory.setCity("Pune");
+factory.setState("Maharashtra");

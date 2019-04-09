@@ -1,0 +1,12 @@
+drop table agreement cascade constraints;
+
+new Select(this.state).selectByVisibleText(state);		for drop down menu
+\or
+Select drpCity = new Select(pfcity);
+drpCity.selectByVisibleText(sfcity);
+
+
+//apche.tomcat.embed
+//org.eclips.jdt.core.compiler
+//org.webjars
+

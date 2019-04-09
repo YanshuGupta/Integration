@@ -1,0 +1,11 @@
+insert into merchantdetail values(2000, 'Ram pur', 'yanshu@gupta.com', '8979225022', 'Yanshu Gupta', 5, 'Gupta ji ka store');
+
+insert into merchantdetail_products values(2000, 30000);
+
+insert into productdetail values(30000, 'Sony', 'Electronics', 'pta nhi', 'egydo', 'model', 'jBl 100si', 999, 'type');
+
+ insert into customerdetail values(10000,'yanshu','yanshu@gmail.com','9795716325','asfqa','208005'); 
+
+insert into promo values('first',20,"2018-12-31",'A'); 
+
+ insert into orderdetail values(500, 'ordered',999,"2018-12-31",1,999,10000,2000,123,30000,'first'); 

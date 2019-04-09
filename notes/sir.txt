@@ -1,0 +1,236 @@
+which method calls first n, 
+
+init(ServletConfig config)
+init()
+
+service(genericServlet sevlet)
+service(httpServlet servlet)
+
+apart from response what is extra info pass from server to client
+set home page in deployement discriptor (in XML file) hint:use welcome tag
+
+<servlet>
+	<servlet-name>test</servlet-name>
+	<servlet-class>com.cg.MyServlet</servlet-class>
+
+	<init-param>
+		<param-name>database</>
+		<param-value>oracle</>
+	</init-param>
+</servlet>
+
+
+<servlet-mapping>
+	<servlet-name>test</servlet-name>
+	<url-pattern>/myownurlpattren</url-pattern>
+</servlet-mapping>
+
+
+2>servlet config vs servlet context -writing  extra info so that no need to compile servlet file again and again on small changes
+init-param can be multiple so that multiple values can be used
+	<init-param>
+		<param-name>database</>
+		<param-value>oracle</>
+	</init-param>
+
+context
+
+<context-param>  <!--on root tag--> can be accessible as global data
+	<param-name>database</>
+	<<param-value>okok</>
+</>
+
+
+3>Web Container\
+manages Servlet life cycle
+	JSP life cycle
+
+Support multi threading
+network support
+
+
+
+4>servlet life cycle
+
+5steps
+
+
+
+try any one listener
+
+------org.apache.catalina.startup.Catalina load
+Constructor of ContextListener
+Constructor of RequestListener
+Context Initialized
+-------org.apache.catalina.startup.Catalina start
+Request Initialized
+Constructor of Servlet
+Servlet doGet
+12
+1
+2
+15
+8
+Request Destroyed
+Context Destroyed	(when server is manally stopped)
+
+
+
+
+======================================================
+-----org.apache.catalina.startup.Catalina load
+Constructor of ContextListener
+Constructor of Session
+Constructor of RequestListener
+Context Initialized
+------org.apache.catalina.startup.Catalina start
+Request Initialized
+Constructor of Servlet
+Servlet doGet
+12
+1
+2
+15
+8
+Request Destroyed
+Request Initialized
+Servlet doGet
+12
+1
+2
+15
+8
+Request Destroyed
+Context Destroyed (when* *ser*-ver stopped)
+
+
+
+
+
+
+
+
+
+
+
+Session magm
+
+HttpSession
+Cookie
+url rewriting
+hidden form
+HttpSession session = request.getSession(true/false/_(use Existing if session doesnot exist create new one));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Servlet 
+html code is embedded in java code
+
+JSP
+Java Code is embedded in html
+
+
+JSP
+
+
+Model1
+Writing business logic and representaion on single page
+
+Model2
+Business logic - Servlet
+Presentation - JSP
+
+
+
+
+Points
+:
+1.JSP Scripting Elements
+In JSP, java code can be written inside the jsp page using the scriptlet tag. Let's see what are the scripting elements first.
+
+2.Firms of Scripting Elements
+<% %> (Scriptlet tag)--- inside html tag can declare variables
+<%! %> (Declaration tag) --can declare variable and methods
+<%= %>	(Expression tag) printing
+<%@ %> (Directive tag) importing packages
+
+3.Predefined variables or implicite object
+Object			Type				Example
+out			JspWriter			out.print("blah blah");
+request			HttpServletRequest		String name=request.getParameter("uname");  
+response		HttpServletResponse		response.sendRedirect("http://www.google.com");  
+config			ServletConfig			String driver=config.getInitParameter("dname");  from xml
+application		ServletContext			String driver=application.getInitParameter("dname");  
+session			HttpSession			session.setAttribute("user",name);  
+pageContext		PageContext			pageContext.setAttribute("user",name,PageContext.SESSION_SCOPE);   pageContext object can be used to set,get or remove attribute from one of the following scopes:page, request, session, application
+page			Object				<% (HttpServlet)page.log("message"); %> or <% this.log("message"); %>
+exception		Throwable			<%@ page isErrorPage="true" %>  
+							<html>  
+								<body>  
+									Sorry following exception occured:<%= exception %>  
+								</body>  
+							</html>  
+
+4.Example using scripting elements
+
+
+5.JSP directives (3 kinds of [page directive, include directive, taglib directive])
+<%@ page import="java.util.Date" %>  
+Today is: <%= new Date() %>  
+
+6.PAge directives
+<%@ page errorPage="myerrorpage.jsp" %>  
+<%= 100/0 %>  
+and at error page need to write script
+<%@ page isErrorPage="true" %>  
+Sorry an exception occured!<br/>  
+The exception is: <%= exception %>  if excption not working then---> exception.printStackTrace(response.getWriter());
+
+7.Include directives
+<%@ include file="header.html" %>  
+
+8.JSP Action 
+JSP Action Tags		Description
+jsp:forward		forwards the request and response to another resource.
+jsp:include		includes another resource.
+jsp:useBean		creates or locates bean object.
+jsp:setProperty		sets the value of property in bean object.
+jsp:getProperty		prints the value of property of the bean.
+jsp:plugin		embeds another components such as applet.
+jsp:param		sets the parameter value. It is used in forward and include mostly.
+jsp:fallback		can be used to print the message if plugin is working. It is used in jsp:plugin.
+
+9.JSP :Include Action
+<jsp:include page="printdate.jsp" />  
+
+10.JSP : Forward Action
+forward action tag without parameter--------><jsp:forward page="printdate.jsp" />  
+<jsp:param name="name" value="lala" />  
+
+JSP : useBean-----
+<jsp:useBean id="obj" class="com.cg.User"></jsp:useBean>  
+<jsp:setProperty property="name" name="obj" value="<%=name %>"/>  
+
+11.JSP Standard templa
+12.what is jstl
+13.how to install jstl
+14.Using the expression language
+15.Using JSTL

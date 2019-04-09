@@ -1,0 +1,32 @@
+My Name is Yanshu.:-)
+
+connect system/Capgemini123
+DDL
+DML
+DCL->GRANT PERMISSION
+DQL
+AUTO COMMIT
+STRING AND DATES IN SINGLE QUATES
+
+INSERT RECORD FROM ANOTHER TABLE WITH CRITERIA--------------
+
+UPDATE QUERY BY SELECT STATEMENT-------------------
+
+can we use distinct on diff column-------------------
+
+AGGREGATE FUNCTION+++++++++++++++
+
+Only can use 'having' after 'group By'---------------
+
+find out second highest and lowest marks------------------
+select max(id) from person where id <> (select Max(id) from person);
+
+find out percentage of employee department wise
+select name,count(name)*100/(select count(id) from person) from person group by name;
+
+co related query
+
++ where
+
+in employee table increase the salary by 10% for department A
+

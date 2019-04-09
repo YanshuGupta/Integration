@@ -1,0 +1,109 @@
+1. What does Cucumber do?
+a. Cucumber tests web page safety.
+b. Cucumber tests other software.	:-)
+c. Cucumber test proxy status.
+d. Cucumber tests software for phishing malware.
+
+
+2. In which programming language was Cucumber originally written?
+a) Mercury
+b) Selenium
+c) Diamond
+d) Ruby		:-)
+
+
+3. Which one of these Formatter Plugins Cucumber doesn't use to provide output?
+a) www		:-)
+b) JSON
+c) HTML
+d) JUnit
+
+
+4. Which of the following is/are used as hooks in Cucumber? (multiple)
+a) When
+b) Then
+c) After	:-)
+d) Result
+e) Before	:-)
+f) Given
+
+
+5. What are the files required to execute a Cucumber test scenario?
+a) Features
+b) Step Definition
+c) Both A and B		:-)
+d) None
+
+
+6. Which dependency is sufficient for Cucumber? (multiple)
+a. Cucumber-junit	:-)
+b. Cucumber-core	:-)
+c. Cucumber-java	:-)
+d. Cucumber-testing
+
+
+7. Which software platform is supported by Cucumber?
+a. Ruby on Rails
+b. Selenium
+c. Spring Framework
+d. PicoContainer
+e. All of the above 	:-)
+
+
+8. Syntax of Cucumber Options tag:
+a) @CucumberOptions(features="Features",glue={"StepDefinition"})	:-)
+b) @CucumberOptions(features="Features",glue="StepDefinition")		:-)
+c) @CucumberOptions(glue={"StepDefinition"})
+d) @CucumberOptions(features="Features") 				:-)
+
+
+9. What is the general limit for the maximum number of scenarios that can be included in the feature file?
+a) 15
+b) 10		:-)
+c) 20
+d) 5
+but the number can vary from project to project and from one organization to another. But it is generally advisable to limit the number of scenarios included in the feature file.
+
+
+10. What symbol is used for parameterization in Cucumber?
+a. (&)
+b. (|)		:-)
+c. (^)
+d. ($)
+
+
+11. What is profile in Cucumber?
+a. Used to add hooks
+b. Is a folder where we can setup cucumber related support
+c. Use to run Specific features and step definition
+d. Used to load the required libraries for cucumber scenario execution
+
+
+12. Any tag that exists on a feature will be inherited by scenario, scenario outline or examples
+a. True		:-)
+b. False
+
+
+13. What are advantages of Cucumber? (multiple)
+a. Involves only developers
+b. Can involve business stakeholders who cannot code
+c. Involves only testers
+d. End user experience is the priority
+e. High Code reusability
+
+
+14. What is after hook?
+a. Executes before the feature file execution
+b. Executes after the feature file execution		:-)
+c. Executes before each step execution
+d. Executes after each step execution
+
+
+What are the advanced framework design that can be used with cucumber?
+a. Page Object Model	:-)
+b. Log4J
+c. Extent Reporting
+d. None
+Must be All
+
+

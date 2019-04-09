@@ -1,0 +1,15 @@
+locator techniquesL:
+id
+name
+tagname
+cssSelector
+linkText
+partialLinkText
+xpath
+
+sellenium client jar file
+
+System.setProperty("webdriver.chrome.driver","path")
+driver = new CromeDriver();
+driver.manage().timeouts().pageLoadTimeout(30,TimeUnit,SECONDS);
+driver.get("url");

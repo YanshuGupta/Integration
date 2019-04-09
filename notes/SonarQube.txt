@@ -1,0 +1,9 @@
+Code analysis tool
+
+gradle download dependency from j-center
+
+java -jar jenkins.war --httpPort=8888
+localhost:8888	
+	install suggested plugins/install/available/download and upload plugin{Advanced}
+	
+		manage jenkins -> manage plugins

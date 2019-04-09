@@ -1,0 +1,10 @@
+
+
+DispatherServlet: The entry/configration point for the application
+Controller: command pattern object that handle the request and determines which view to route to
+RequestMapping: the url and request type that a method is tied to 
+viewResolver: Used to Locate JSP pages oe whatsever view we are using
+Servlet-Config-Configration file per DispatcherServlet
+
+when no handler mapping is ecplicitely specified in configration beanNamedUrlHandlerMapping is used by default
+
